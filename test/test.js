@@ -14,5 +14,12 @@ describe("Phrase", function() {
       let plainPalindrome = new Phrase("racecar");
       assert(plainPalindrome.palindrome());
     });
+
+    it("パリンドロームが大文字小文字混じりでもtrueを返す", function() {
+      let plainPalindrome = new Phrase("RaceCar");
+      assert(plainPalindrome.palindrome());
+    });
+
+    it("パリンドロームに句読点があってもtrueを返す");
   });
 });
