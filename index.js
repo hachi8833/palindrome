@@ -18,7 +18,9 @@ function Phrase(content) {
   // 利用例:
   //   new Phrase("Hello, world!").letters() === "Helloworld"
   this.letters = function letters() {
-    return (this.content.match(/[a-z]/gi) || []).join("");
+    const letterRegex = /[a-z]/gi;
+    return (Array.from(this.content).filter(c => c.match(letterRegex)) || []).join("");
+    // return (this.content.match(/[a-z]/gi) || []).join("");
   }
 
   // パリンドロームならtrueを、違うならfalseを返す
